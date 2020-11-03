@@ -8,13 +8,86 @@
     <link rel="stylesheet" href="/tema3-prototype/styles/main.css">
     <link rel="stylesheet" href="/tema3-prototype/styles/custom-order.css">
     
-
+    <script src="https://kit.fontawesome.com/b4209499b2.js" crossorigin="anonymous"></script>
     <script src="/tema3-prototype/scripts/nav.js"defer></script>
     <script src="/tema3-prototype/scripts/custom-order.js"defer></script>
 </head>
 
-
-
 <body>
+    <main>
+        <h1>Custom Orders</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aperiam eos laboriosam mollitia saepe assumenda ex natus explicabo, ratione recusandae voluptas consectetur inventore sint eius laborum aliquid, hic doloribus. Mollitia.In, consequuntur dolore, ex harum odit dolor architecto adipisci iusto reprehenderit aut temporibus voluptas maxime nobis qui molestiae, accusamus quisquam officia! Ipsa repudiandae doloribus commodi, inventore laudantium laboriosam qui fugit.</p>
+
+        <button id="startButton">Get Started</button>
+
+    </main>
+
+    <form action="">
+        <section id="formPageOne">
+            <label for="name">NAME:</label>
+            <input type="text" name="name" id="firstName">
+            <input type="text" name="name" id="lastName">                        
+     
+            <label for="email">EMAIL:</label>
+            <input type="email" name="email">                   
+      
+            <label for="location">LOCATION:</label>
+            <input type="text" name="location">
+                
+        <button class="nextButton">Next</button>
+        </section>
+
+        <section id="formPageTwo">
+            <label for="productType">Product Type</label>
+            <input type="text" name="productType">
+
+            <label for="materielType">Materiel Type</label>
+            <select name="materielType" id="materielType">
+                <option value="Plywood">Plywood</option>
+                <option value="Solid Wood">Solid Wood</option>
+                <option value="MDF Composit Wood">MDF Composit Wood</option>
+                <option value="Metal">Metal</option>
+            </select>
+
+            <label for="woodType">Wood Type</label>
+            <select name="woodType" id="woodType">
+                <option value="Oak">Oak</option>
+                <option value="Birch">Birch</option>
+                <option value="Walnut">Walnut</option>
+                <option value="Pine">Pine</option>
+                <option value="No Preference">No Preference</option>
+            </select>
+
+            <label for="">Finish</label>
+                <select name="finishType" id="finishType">
+                    <option value="Oil/Wax">Oil/Wax</option>
+                    <option value="Paint">Paint</option>
+                    <option value="No Preference">No Preference</option>
+                </select>
+
+            <button class="nextButton">Next</button>
+        </section>
+
+        <section id="formPageThree">
+            <h2>Budget</h2>
+
+            <label class="priceContainer">1,500 - 5,000 kr<input value="1,500 - 5,000"type="radio" name="radio"><span></span></label>
+
+            <label class="priceContainer">5,000 - 10,000 kr<input value="5,000 - 10,000" type="radio" name="radio"><span></span></label>
+
+            <label class="priceContainer">over 10,000 kr<input value="10,000+"type="radio" name="radio"><span></span></label>
+
+            <h2>Message</h2>
+            <textarea id="messageBox" name="messageBox" rows="5" cols="30">Give us more details and information about the custom furniture piece you would like</textarea>
+
+
+            <button class="submitButton">Submit</button>
+
+        </section>
+    </form>
+
+
+
+    
 </body>
 </html>

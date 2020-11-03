@@ -1,3 +1,105 @@
 body {
 	margin: 0;
 }
+
+main {
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+}
+
+h1 {
+	text-align: center;
+}
+
+main > p {
+	font-size: 1.3rem;
+	border: 1px solid black;
+	padding: 1rem;
+}
+
+form {
+	margin: 1rem;
+	/* display: flex; */
+	/* position: absolute;
+	top: 110px; */
+}
+section {
+	border: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 5px;
+}
+
+#formPageOne label,
+#formPageTwo label {
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-align: left;
+	flex: 5 0 100%;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+input {
+	margin: 5px auto;
+}
+
+input[name="name"] {
+	width: 30%;
+	margin: .5rem;
+}
+
+select {
+	width: 70%;
+}
+
+h2 {
+	width: 100%;
+}
+.priceContainer {
+	position: relative;
+	display: flex;
+	font-size: 1.5rem;
+	text-align: left;
+	flex: 5 0 50%;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+input[type=radio] {
+	margin: 0;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+span {
+	position: absolute;
+	top: 0;
+	left: -20px;
+	height: 15px;
+	width: 15px;
+	margin: 2px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+.priceContainer:hover input ~ span {
+	background-color: rgb(153, 152, 152);
+}
+
+.priceContainer input:checked ~ span {
+	background-color: lightgreen;
+}
+.startButton,
+.nextButton,
+.submitButton {
+	width: 70%;
+	margin: 1rem;
+	padding: .5rem;
+}
