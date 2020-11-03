@@ -22,16 +22,23 @@ main > p {
 
 form {
 	margin: 1rem;
-	/* display: flex; */
-	/* position: absolute;
-	top: 110px; */
+	position: absolute;
+	top: 110px;
+	left: 100vw;
+	display: flex;
+	gap: 10px;
 }
+
 section {
 	border: 1px solid black;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 5px;
+	height: 50vh;
+	visibility: hidden;
+	transition: .5s;
+	width: 80vw;
 }
 
 #formPageOne label,
@@ -45,11 +52,11 @@ section {
 }
 
 input {
-	margin: 5px auto;
+	margin: 7px auto;
 }
 
 input[name="name"] {
-	width: 30%;
+	width: 35%;
 	margin: .5rem;
 }
 
@@ -96,10 +103,44 @@ span {
 .priceContainer input:checked ~ span {
 	background-color: lightgreen;
 }
-.startButton,
+
+.buttonContainer {
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10vh;
+	margin: .5rem;
+}
+
+.fa-hammer {
+	font-size: 2.5rem;
+	position: absolute;
+	top: -13px;
+	left: 3rem;
+}
+
+.hammerDown {
+	transform: translateX(12px) translateY(10px) rotate(65deg);
+	transition: .4s;
+	transition-delay: .2s;
+}
+
+.hammerUp {
+	transform: translateX(-0) translateY(0) rotate(0deg);
+}
+
+#startButton,
 .nextButton,
-.submitButton {
-	width: 70%;
-	margin: 1rem;
-	padding: .5rem;
+#submitButton {
+	width: 55%;
+	height: 5.5vh;
+	/* width: 70%;
+	margin: 2rem;
+	padding: .5rem; */
+}
+
+#progressContainer {
+	background-color: orange;
 }
