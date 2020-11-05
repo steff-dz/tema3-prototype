@@ -14,9 +14,14 @@ function enterForm() {
 	main.style.display = 'none';
 	createProgressBar();
 	progressContainer.children[0].style.backgroundColor = 'lightgreen';
+	form.style.right = '0';
 	sections[0].style.visibility = 'visible';
-	form.style.left = '10vw';
-	sections[0].style.transform = 'translateX(-10px)';
+	sections[0].style.position = 'absolute';
+	sections[0].style.top = '5rem';
+	sections[0].style.right = '-5rem';
+
+	// form.style.left = '10vw';
+	sections[0].style.transform = 'translateX(-6.5rem)';
 }
 
 function dropHammer(cb) {
