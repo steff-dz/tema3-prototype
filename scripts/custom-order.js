@@ -9,10 +9,20 @@ const buttons = document.querySelectorAll('button');
 buttons[0].addEventListener('click', function() {
 	dropHammer(enterForm);
 });
+// buttons[1].addEventListener('click', function() {
+// 	dropHammer(nextPage);
+// });
 
 function enterForm() {
 	main.style.display = 'none';
 	createProgressBar();
+
+	for (hammer of hammers) {
+		hammer.style.animationName = 'hammerUp';
+		// hammer.classList.add('hammerUp');
+		// hammer.classList.remove('hammerDown');
+	}
+
 	progressContainer.children[0].style.backgroundColor = 'lightgreen';
 	form.style.right = '0';
 	sections[0].style.visibility = 'visible';
@@ -20,12 +30,15 @@ function enterForm() {
 	sections[0].style.top = '5rem';
 	sections[0].style.right = '-5rem';
 
-	// form.style.left = '10vw';
 	sections[0].style.transform = 'translateX(-6.5rem)';
 }
 
 function dropHammer(cb) {
-	hammers[0].classList.add('hammerDown');
+	for (hammer of hammers) {
+		//hammer.classList.add('hammerDown');
+		hammer.style.animationName = 'hammerDown';
+	}
+	//hammers[0].classList.add('hammerDown');
 	return setTimeout(cb, 800);
 }
 
@@ -38,4 +51,8 @@ function createProgressBar() {
 	<div class="progressBox">2</div>
 	<div class="progressBox">3</div>
 	`;
+}
+
+function nextPage() {
+	section[0].style.backgroundColor = 'blue';
 }

@@ -134,17 +134,31 @@ span {
 	position: absolute;
 	top: -10px;
 	left: 3rem;
+	animation-duration: .4s;
+	animation-delay: .2s;
+	animation-fill-mode: forwards;
 }
 
-.hammerDown {
+@keyframes hammerDown {
+	100% {
+		transform: translateX(12px) translateY(10px) rotate(65deg);
+	}
+}
+
+@keyframes hammerUp {
+	100% {
+		transform: translateX(-0) translateY(0) rotate(0deg);
+	}
+}
+/* .hammerDown {
 	transform: translateX(12px) translateY(10px) rotate(65deg);
 	transition: .4s;
 	transition-delay: .2s;
-}
+} */
 
-.hammerUp {
+/* .hammerUp {
 	transform: translateX(-0) translateY(0) rotate(0deg);
-}
+} */
 
 #startButton,
 .nextButton,
