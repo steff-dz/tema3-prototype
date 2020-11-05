@@ -1,10 +1,6 @@
-html {
-}
-
 body {
 	margin: 0;
-	overflow: hidden;
-	position: relative;
+	/* position: relative; */
 }
 
 main {
@@ -12,7 +8,7 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	position: relative;
+	/* position: relative; */
 }
 
 h1 {
@@ -23,6 +19,7 @@ main > p {
 	font-size: 1.3rem;
 	border: 1px solid black;
 	padding: 1rem;
+	width: 90%;
 }
 
 form {
@@ -35,7 +32,10 @@ form {
 	position: absolute;
 	top: 5rem;
 	right: 100vw;
+	height: 60vh;
+	width: 100%;
 	/* right: 100vw; */
+	/* overflow-x: hidden; */
 }
 
 section {
@@ -193,6 +193,22 @@ span {
 	border: 1px solid black;
 }
 
-#confirmationMessage {
+.confirmationMessage {
 	text-align: center;
+	font-weight: 600;
+}
+
+#orderReview {
+	border: 1px solid black;
+	width: 80vw;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	background-color: #eee;
+}
+
+#orderReview ul {
+	list-style-type: none;
+	margin: 0;
+	padding: .5rem;
 }

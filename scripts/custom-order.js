@@ -6,26 +6,22 @@ const sections = document.querySelectorAll('section');
 const hammers = document.querySelectorAll('.fa-hammer');
 const buttons = document.querySelectorAll('button');
 
-//INPUT VARIABLES FOR FIRST FORM PAGE
+//INPUT VARIABLES FOR FIRST FORM PAGE-----------
 const firstName = document.querySelector('#firstName');
 const lastName = document.querySelector('#lastName');
 const email = document.querySelector('#email');
 const locationInput = document.querySelector('#location');
 
-//INPUT VARIABLES FOR SECOND PAGE
+//INPUT VARIABLES FOR SECOND PAGE--------------
 const productType = document.querySelector('#productType');
 const materielType = document.querySelector('#materielType');
 const woodType = document.querySelector('#woodType');
 const finishType = document.querySelector('#finishType');
 
-//INPUT VARIABLES FOR THIRD PAGE
-// const radioValue = document.querySelector('input[name=radio]:checked').value;
-// const budgetOne = document.querySelector('#budgetOne');
-// const budgetTwo = document.querySelector('#budgetTwo');
-// const budgetThree = document.querySelector('#budgetThree');
+//INPUT VARIABLES FOR THIRD PAGE------------------
 const messageBox = document.querySelector('#messageBox');
 
-//BELOW ARE MY EVENT LISTENERS FOR THE BUTTONS
+//BELOW ARE MY EVENT LISTENERS FOR THE BUTTONS------
 buttons[0].addEventListener('click', function() {
 	dropHammer(enterForm);
 });
@@ -56,6 +52,7 @@ function enterForm() {
 
 	progressContainer.children[0].style.backgroundColor = 'lightgreen';
 	form.style.right = '0';
+	form.style.overflowX = 'hidden';
 	sections[0].style.visibility = 'visible';
 	sections[0].style.position = 'absolute';
 	sections[0].style.top = '5rem';
@@ -111,21 +108,23 @@ function thirdPage() {
 
 function finalPage() {
 	progressContainer.style.display = 'none';
+	form.style.overflowX = '';
 	form.style.display = 'none';
 	const radioValue = document.querySelector('input[name=radio]:checked').value;
 
 	document.body.innerHTML += `
-	<h2 id="confirmationMessage">Thank you for your order!</h2>
-	<div id="orderReview">
-	Name: ${firstName.value} ${lastName.value}
-	Email: ${email.value}
-	Location: ${locationInput.value}
-	Desired Product: ${productType.value}
-	Materiel Type: ${materielType.value}
-	Wood Type: ${woodType.value}
-	Finish: ${finishType.value}
-	Budget: ${radioValue}
-	
-	</div>
+	<h2 class="confirmationMessage">Thank you for your order!</h2>
+	<div id="orderReview"><ul>
+	<li><b>Name:</b> ${firstName.value} ${lastName.value}</li>
+	<li><b>Email:</b> ${email.value}</li>
+	<li><b>Location:</b> ${locationInput.value}</li>
+	<li><b>Desired Product:</b> ${productType.value}</li>
+	<li><b>Materiel Type:</b> ${materielType.value}</li>
+	<li><b>Wood Type:</b> ${woodType.value}</li>
+	<li><b>Finish:</b> ${finishType.value}</li>
+	<li><b>Budget:</b> ${radioValue}</li>
+	<li><b>Message:</b> ${messageBox.value}</li>
+	</ul></div>
+	<h2 class="confirmationMessage">Sarah will get in touch<br> with you soon!</h2>
 	`;
 }
