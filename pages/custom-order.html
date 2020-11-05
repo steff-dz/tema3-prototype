@@ -32,10 +32,10 @@
             <input type="text" name="name" id="lastName">                        
      
             <label for="email">EMAIL:</label>
-            <input type="email" name="email">                   
+            <input type="email" id="email" name="email">                   
       
             <label for="location">LOCATION:</label>
-            <input type="text" name="location">
+            <input type="text" name="location" id="location">
         <div class="buttonContainer">
             <i class="fas fa-hammer"></i>        
             <button class="nextButton">Next</button>
@@ -45,7 +45,7 @@
 
         <section id="formPageTwo">
             <label for="productType">Product Type</label>
-            <input type="text" name="productType">
+            <input type="text" name="productType" id="productType">
 
             <label for="materielType">Materiel Type</label>
             <select name="materielType" id="materielType">
@@ -82,11 +82,11 @@
         <section id="formPageThree">
             <h2>Budget</h2>
 
-            <label class="priceContainer">1,500 - 5,000 kr<input value="1,500 - 5,000"type="radio" name="radio"><span></span></label>
+            <label class="priceContainer">1,500 - 5,000 kr<input value="1,500 - 5,000"type="radio" name="radio" id="budgetOne"><span></span></label>
 
-            <label class="priceContainer">5,000 - 10,000 kr<input value="5,000 - 10,000" type="radio" name="radio"><span></span></label>
+            <label class="priceContainer">5,000 - 10,000 kr<input value="5,000 - 10,000" type="radio" name="radio" id="budgetTwo"><span></span></label>
 
-            <label class="priceContainer">over 10,000 kr<input value="10,000+"type="radio" name="radio"><span></span></label>
+            <label class="priceContainer">over 10,000 kr<input value="10,000+"type="radio" name="radio" id="budgetThree"><span></span></label>
 
             <h2>Message</h2>
             <textarea id="messageBox" name="messageBox" rows="5" cols="30">Give us more details and information about the custom furniture piece you would like</textarea>

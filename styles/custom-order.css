@@ -192,3 +192,7 @@ span {
 	padding: .5rem;
 	border: 1px solid black;
 }
+
+#confirmationMessage {
+	text-align: center;
+}
