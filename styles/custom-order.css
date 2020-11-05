@@ -16,26 +16,23 @@ h1 {
 }
 
 main > p {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	border: 1px solid black;
 	padding: 1rem;
 	width: 90%;
 }
 
 form {
-	margin: 1rem;
-	/* position: absolute;
-	top: 10rem;
-	left: 150vw; */
+	/* margin: 1rem; */
 	gap: 10px;
 	display: flex;
 	position: absolute;
 	top: 5rem;
 	right: 100vw;
-	height: 60vh;
+	height: 90vh;
 	width: 100%;
-	/* right: 100vw; */
-	/* overflow-x: hidden; */
+
+	overflow-x: hidden;
 }
 
 section {
@@ -44,21 +41,18 @@ section {
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 5px;
-	height: 50vh;
+	height: fit-content;
 	display: flex;
 	visibility: hidden;
 	width: 80vw;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	/* transition: .3s;
-	transition-duration: 1s;
-	visibility: hidden;
-	width: 80vw; */
+	margin-top: 5.5%;
 }
 
 @keyframes slideFormPage {
 	100% {
-		transform: translateX(-6.5rem);
+		transform: translateX(-7.7rem);
 	}
 }
 
@@ -139,7 +133,8 @@ span {
 	font-size: 2.5rem;
 	position: absolute;
 	top: -10px;
-	left: 3rem;
+	/* left: 4rem; */
+	left: 17%;
 	animation-duration: .4s;
 	animation-delay: .2s;
 	animation-fill-mode: forwards;
@@ -147,7 +142,7 @@ span {
 
 @keyframes hammerDown {
 	100% {
-		transform: translateX(12px) translateY(10px) rotate(65deg);
+		transform: translateX(12px) translateY(10px) rotate(30deg);
 	}
 }
 
@@ -156,24 +151,12 @@ span {
 		transform: translateX(-0) translateY(0) rotate(0deg);
 	}
 }
-/* .hammerDown {
-	transform: translateX(12px) translateY(10px) rotate(65deg);
-	transition: .4s;
-	transition-delay: .2s;
-} */
-
-/* .hammerUp {
-	transform: translateX(-0) translateY(0) rotate(0deg);
-} */
 
 #startButton,
 .nextButton,
 #submitButton {
 	width: 55%;
 	height: 5.5vh;
-	/* width: 70%;
-	margin: 2rem;
-	padding: .5rem; */
 }
 
 #progressContainer {
@@ -181,6 +164,7 @@ span {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	margin: 1rem;
 }
 
 .progressBox {
@@ -212,3 +196,64 @@ span {
 	margin: 0;
 	padding: .5rem;
 }
+
+@media only screen and (min-width: 320px) {
+	.fa-hammer {
+		left: 18%;
+	}
+
+	@keyframes slideFormPage {
+		100% {
+			transform: translateX(-8.2rem);
+		}
+	}
+}
+
+@media only screen and (min-width: 360px) {
+	@keyframes slideFormPage {
+		100% {
+			transform: translateX(-8.6rem);
+		}
+	}
+
+	section {
+		margin-top: 8%;
+	}
+}
+
+@media only screen and (min-width: 411px) {
+	@keyframes slideFormPage {
+		100% {
+			transform: translateX(-8.9rem);
+		}
+	}
+}
+
+/* @media only screen and (min-width: 576px) {
+	main > p {
+		font-size: 1.8rem;
+	}
+	@keyframes slideFormPage {
+		100% {
+			transform: translateX(-9.5rem);
+		}
+	}
+
+	input[type=email],
+	input[name=location],
+	input[name=productType] {
+		width: 50%;
+	}
+
+	select {
+		margin: .5rem;
+	}
+
+	#messageBox {
+		width: 40rem;
+	}
+
+	button {
+		height: 6vh;
+	}
+} */

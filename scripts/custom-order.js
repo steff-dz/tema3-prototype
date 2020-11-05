@@ -52,7 +52,7 @@ function enterForm() {
 
 	progressContainer.children[0].style.backgroundColor = 'lightgreen';
 	form.style.right = '0';
-	form.style.overflowX = 'hidden';
+	//form.style.overflowX = 'hidden';
 	sections[0].style.visibility = 'visible';
 	sections[0].style.position = 'absolute';
 	sections[0].style.top = '5rem';
@@ -108,7 +108,7 @@ function thirdPage() {
 
 function finalPage() {
 	progressContainer.style.display = 'none';
-	form.style.overflowX = '';
+	//form.style.overflowX = '';
 	form.style.display = 'none';
 	const radioValue = document.querySelector('input[name=radio]:checked').value;
 
