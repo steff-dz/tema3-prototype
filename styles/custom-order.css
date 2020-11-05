@@ -48,12 +48,18 @@ section {
 	display: flex;
 	visibility: hidden;
 	width: 80vw;
-	transition: 3s;
-	transition-duration: 1s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
 	/* transition: .3s;
 	transition-duration: 1s;
 	visibility: hidden;
 	width: 80vw; */
+}
+
+@keyframes slideFormPage {
+	100% {
+		transform: translateX(-6.5rem);
+	}
 }
 
 #formPageOne label,

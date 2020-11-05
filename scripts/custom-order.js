@@ -9,9 +9,11 @@ const buttons = document.querySelectorAll('button');
 buttons[0].addEventListener('click', function() {
 	dropHammer(enterForm);
 });
-// buttons[1].addEventListener('click', function() {
-// 	dropHammer(nextPage);
-// });
+
+buttons[1].addEventListener('click', function(event) {
+	event.preventDefault();
+	dropHammer(nextPage);
+});
 
 function enterForm() {
 	main.style.display = 'none';
@@ -29,8 +31,10 @@ function enterForm() {
 	sections[0].style.position = 'absolute';
 	sections[0].style.top = '5rem';
 	sections[0].style.right = '-5rem';
+	sections[0].style.animationName = 'slideFormPage';
+	//sections[0].style.transform = 'translateX(-6.5rem)';
 
-	sections[0].style.transform = 'translateX(-6.5rem)';
+	console.log(buttons[1]);
 }
 
 function dropHammer(cb) {
@@ -53,6 +57,18 @@ function createProgressBar() {
 	`;
 }
 
-function nextPage() {
-	section[0].style.backgroundColor = 'blue';
+function nextPage(event) {
+	sections[0].style.visibility = 'hidden';
+	progressContainer.children[1].style.backgroundColor = 'lightgreen';
+	for (hammer of hammers) {
+		hammer.style.animationName = 'hammerUp';
+	}
+	sections[1].style.visibility = 'visible';
+	sections[1].style.position = 'absolute';
+	sections[1].style.top = '5rem';
+	sections[1].style.right = '-5rem';
+
+	sections[1].style.animationName = 'slideFormPage';
+	// sections[1].style.transform = 'translateX(-6.5rem)';
+	// sections[1].style.transition = '1s';
 }
