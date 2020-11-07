@@ -113,7 +113,7 @@ function finalPage() {
 	const radioValue = document.querySelector('input[name=radio]:checked').value;
 
 	document.body.innerHTML += `
-	<h2 class="confirmationMessage">Thank you for your order!</h2>
+	<h2 class="confirmationMessage">Thank you for your interest!</h2>
 	<div id="orderReview"><ul>
 	<li><b>Name:</b> ${firstName.value} ${lastName.value}</li>
 	<li><b>Email:</b> ${email.value}</li>
@@ -125,6 +125,6 @@ function finalPage() {
 	<li><b>Budget:</b> ${radioValue}</li>
 	<li><b>Message:</b> ${messageBox.value}</li>
 	</ul></div>
-	<h2 class="confirmationMessage">Sarah will get in touch<br> with you soon!</h2>
+	<h2 class="confirmationMessage">I'll get in touch with you soon! </h2>
 	`;
 }
