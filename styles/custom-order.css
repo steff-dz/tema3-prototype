@@ -30,6 +30,7 @@ main > p {
 	height: 50vh;
 	/* max-height: 500px; */
 	overflow: scroll;
+	overflow-x: hidden;
 	line-height: 1.3em;
 	/* play around with this for responsivity */
 	/* height: 25%;
@@ -54,19 +55,25 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 5px;
+	padding: .5em;
 	height: fit-content;
 	display: flex;
 	visibility: hidden;
 	width: 80vw;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
 	margin-top: 5.5%;
 }
 
 @keyframes slideFormPage {
+	0% {
+		transform: translateX(200px);
+	}
+
 	100% {
-		transform: translateX(-7.7rem);
+		margin: 5.5% 10%;
+		right: 0vw;
 	}
 }
 
@@ -87,6 +94,10 @@ input {
 input[name="name"] {
 	width: 35%;
 	margin: .5rem;
+}
+
+input[name="productType"] {
+	width: 70%;
 }
 
 select {
@@ -145,9 +156,9 @@ span {
 }
 
 .fa-hammer {
-	font-size: 2.5rem;
+	font-size: 2.8rem;
 	position: absolute;
-	top: -10px;
+	top: -13px;
 	/* left: 4rem; */
 	left: 17%;
 	animation-duration: .4s;
@@ -157,7 +168,7 @@ span {
 
 @keyframes hammerDown {
 	100% {
-		transform: translateX(12px) translateY(10px) rotate(30deg);
+		transform: translateX(12px) translateY(5px) rotate(40deg);
 	}
 }
 
@@ -171,7 +182,7 @@ span {
 .nextButton,
 #submitButton {
 	width: 55%;
-	padding: .5em;
+	padding: .3em;
 	/* height: 5.5vh */
 }
 
@@ -213,31 +224,27 @@ span {
 	padding: .5rem;
 }
 
+/* START OF MEDIA QUERIES-------------------------------------------------- */
 @media only screen and (min-width: 320px) {
 	.fa-hammer {
 		left: 18%;
 	}
-
-	@keyframes slideFormPage {
-		100% {
-			transform: translateX(-8.2rem);
-		}
-	}
 }
 
 @media only screen and (min-width: 360px) {
-	@keyframes slideFormPage {
-		100% {
-			transform: translateX(-8.6rem);
-		}
-	}
-
 	section {
 		margin-top: 8%;
 	}
 
 	button {
 		font-size: 1.8rem;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+	input[name="email"],
+	input[name="location"] {
+		width: 70%;
 	}
 }
 
@@ -248,7 +255,6 @@ span {
 
 	main > p {
 		padding: .8em;
-		overflow-x: hidden;
 	}
 
 	button {
@@ -277,9 +283,9 @@ span {
 		line-height: 1.3em;
 	}
 
-	/* #startButton {
-		height: 8vh;
-	} */
+	section {
+		margin-top: 2%;
+	}
 }
 
 /* @media only screen and (min-width: 576px) {
