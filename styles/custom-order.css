@@ -23,7 +23,7 @@ main h1 {
 }
 
 main > p {
-	font-size: 2.3rem;
+	font-size: 2rem;
 	border: 1px solid black;
 	padding: .5em;
 	width: 100%;
@@ -141,6 +141,7 @@ span {
 	align-items: center;
 	height: 10vh;
 	margin: .5rem;
+	margin-top: 1.5rem;
 }
 
 .fa-hammer {
@@ -170,7 +171,8 @@ span {
 .nextButton,
 #submitButton {
 	width: 55%;
-	height: 5.5vh;
+	padding: .5em;
+	/* height: 5.5vh */
 }
 
 #progressContainer {
@@ -233,6 +235,10 @@ span {
 	section {
 		margin-top: 8%;
 	}
+
+	button {
+		font-size: 1.8rem;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -244,15 +250,23 @@ span {
 		padding: .8em;
 		overflow-x: hidden;
 	}
+
+	button {
+		font-size: 2rem;
+	}
+
+	.fa-hammer {
+		top: -20px;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
 	html {
-		font-size: 80%;
+		font-size: 75%;
 	}
 
 	main {
-		padding: 0 5em;
+		padding: 0 25em;
 	}
 
 	main > p {
@@ -260,7 +274,12 @@ span {
 		height: fit-content;
 		overflow: hidden;
 		padding-top: 0;
+		line-height: 1.3em;
 	}
+
+	/* #startButton {
+		height: 8vh;
+	} */
 }
 
 /* @media only screen and (min-width: 576px) {
