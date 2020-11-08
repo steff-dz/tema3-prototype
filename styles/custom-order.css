@@ -1,6 +1,5 @@
 body {
 	margin: 0;
-	/* position: relative; */
 }
 
 main {
@@ -10,7 +9,6 @@ main {
 	justify-content: center;
 	width: 100%;
 	margin: 0 auto;
-	/* position: relative; */
 }
 
 h1 {
@@ -34,13 +32,12 @@ main > p {
 }
 
 form {
-	/* margin: 1rem; */
 	gap: 10px;
 	display: flex;
 	position: absolute;
 	top: 5rem;
 	right: 100vw;
-	/* height: 90vh; */
+	height: 90vh;
 	width: 100%;
 
 	overflow-x: hidden;
@@ -59,7 +56,7 @@ section {
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
-	margin-top: 5.5%;
+	/* margin-top: 5.5%; */
 }
 
 @keyframes slideFormPage {
@@ -68,7 +65,7 @@ section {
 	}
 
 	100% {
-		margin: 5.5% 10%;
+		margin: 6% 10%;
 		right: 0vw;
 	}
 }
@@ -178,7 +175,6 @@ span {
 #submitButton {
 	width: 55%;
 	padding: .3em;
-	/* height: 5.5vh */
 }
 
 #progressContainer {
@@ -187,6 +183,8 @@ span {
 	align-items: center;
 	justify-content: space-around;
 	z-index: 10;
+	margin-top: 1rem;
+	margin-bottom: 0;
 }
 
 .progressBox {
@@ -220,11 +218,6 @@ span {
 }
 
 /* START OF MEDIA QUERIES-------------------------------------------------- */
-/* @media only screen and (min-width: 320px) {
-	.fa-hammer {
-		top: -7%;
-	}
-} */
 
 @media only screen and (min-width: 360px) {
 	section {
@@ -246,6 +239,10 @@ span {
 	.fa-hammer {
 		font-size: 3rem;
 		top: -8%;
+	}
+	input,
+	select {
+		padding: .4rem;
 	}
 }
 
@@ -274,6 +271,11 @@ span {
 	.fa-hammer {
 		top: 10%;
 	}
+
+	input,
+	select {
+		padding: 1rem;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
@@ -295,6 +297,7 @@ span {
 
 	section {
 		margin-top: 2%;
+		padding: 3rem;
 	}
 
 	.buttonContainer {
@@ -306,33 +309,21 @@ span {
 		top: -25%;
 		left: 19%;
 	}
-}
-
-/* @media only screen and (min-width: 576px) {
-	main > p {
-		font-size: 1.8rem;
-	}
-	@keyframes slideFormPage {
-		100% {
-			transform: translateX(-9.5rem);
-		}
-	}
-
-	input[type=email],
-	input[name=location],
-	input[name=productType] {
-		width: 50%;
-	}
-
-	select {
-		margin: .5rem;
-	}
 
 	#messageBox {
-		width: 40rem;
+		width: 80rem;
+		font-size: 1.5rem;
 	}
 
-	button {
-		height: 6vh;
+	@keyframes slideFormPage {
+		0% {
+			transform: translateX(200px);
+		}
+
+		100% {
+			/* margin: 5.5% 10%; */
+			margin: 2% 10%;
+			right: 0vw;
+		}
 	}
-} */
+}
