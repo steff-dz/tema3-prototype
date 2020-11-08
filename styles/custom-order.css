@@ -78,10 +78,7 @@ section {
 	flex: 5 0 100%;
 	margin-left: 15px;
 	margin-top: 5px;
-}
-
-input {
-	margin: 7px auto;
+	margin-bottom: 5px;
 }
 
 input[name="name"] {
@@ -153,7 +150,7 @@ span {
 	position: absolute;
 	top: -8%;
 	left: 17%;
-	animation-duration: .4s;
+	animation-duration: .3s;
 	animation-delay: .2s;
 	animation-fill-mode: forwards;
 }
@@ -295,9 +292,15 @@ span {
 		line-height: 1.3em;
 	}
 
+	#progressContainer {
+		justify-content: center;
+		gap: 5%;
+	}
+
 	section {
 		margin-top: 2%;
 		padding: 3rem;
+		width: 45vw;
 	}
 
 	.buttonContainer {
@@ -322,7 +325,7 @@ span {
 
 		100% {
 			/* margin: 5.5% 10%; */
-			margin: 2% 10%;
+			margin: 2% 28%;
 			right: 0vw;
 		}
 	}
